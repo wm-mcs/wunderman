@@ -1,0 +1,13 @@
+.boton-princial {
+  background-color: $color-primary;
+  text-align: center;
+  font-family: $font-secondary;
+  border-radius: 4px;
+  width: 100%;
+  color: $color-white;
+  padding: 10px 10px;
+}
+
+.boton-princial:hover {
+  background-color: lighten($color-primary, 20);
+}

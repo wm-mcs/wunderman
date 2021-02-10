@@ -1,0 +1,25 @@
+.container {
+  max-width: $max-width-container;
+  margin: 0 auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-align-items-center {
+  align-items: center;
+}
+
+.flex-justify-content-space-between {
+  justify-content: space-between;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.bg-grey {
+  background-color: beige;
+}

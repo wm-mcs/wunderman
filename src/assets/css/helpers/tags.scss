@@ -1,0 +1,36 @@
+h1,
+.h1 {
+  font-size: 4rem !important;
+  font-family: $font-primary;
+  font-weight: lighter;
+}
+
+h2,
+.h2 {
+  font-size: 2rem !important;
+  font-family: $font-primary;
+  font-weight: lighter;
+}
+
+h3,
+.h3 {
+  font-size: 1.5rem !important;
+  font-family: $font-primary;
+}
+
+h4,
+.h4 {
+  font-size: 1.3rem;
+  font-family: $font-primary;
+}
+
+p {
+  font-size: 1rem;
+  font-family: $font-primary;
+  line-height: 1.7;
+}
+
+small {
+  font-size: 0.6rem;
+  line-height: 1.7;
+}

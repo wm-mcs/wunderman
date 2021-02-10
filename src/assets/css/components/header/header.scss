@@ -1,0 +1,31 @@
+header {
+  background-color: $color-black;
+  padding: 8px 0;
+  width: 100%;
+  color: white;
+}
+
+.header-logo {
+  font-size: 1rem;
+  font-family: $font-primary;
+  font-weight: lighter;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-nav-text {
+  font-size: 1rem;
+  color: $color-gray-700;
+  margin-right: 16px;
+  font-family: $font-primary;
+}
+
+.header-nav-iconos {
+}
+
+.header-nav-iconos-icono {
+}

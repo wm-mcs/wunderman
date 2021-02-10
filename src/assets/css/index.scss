@@ -1,0 +1,20 @@
+@import "./config/reset.scss";
+@import "./config/colores.scss";
+@import "./config/fonts.scss";
+@import "./config/generals_config.scss";
+@import "./helpers/layout.scss";
+@import "./helpers/tags.scss";
+@import "./helpers/botones.scss";
+@import "./components/header/header.scss";
+@import "./components/slider/slider_custome.scss";
+@import "./plaugins/flickity.scss";
+
+.background {
+  background-color: red;
+  color: white;
+}
+
+.parrafo {
+  font-size: 50px;
+  font-weight: bold;
+}
