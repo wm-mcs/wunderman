@@ -8,10 +8,15 @@ function manipulateValidationMsg(validationData) {
 	const validationMsgClasses = elementValidationMsg.classList;
 	const removeClass = () => {
 		validationMsgClasses.remove("hide");
+		validationMsgClasses.add("text-error");
+		validationMsgClasses.remove("text-success");
+		elementValidationMsg.innerHTML = inputProps.getAttribute("data-error");
 	};
 
 	const addClass = () => {
-		validationMsgClasses.add("hide");
+		validationMsgClasses.add("text-success");
+		validationMsgClasses.remove("text-error");
+		elementValidationMsg.innerHTML = inputProps.getAttribute("data-success");
 	};
 
 	return action === "hide" ? addClass() : removeClass();
