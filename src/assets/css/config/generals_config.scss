@@ -1,11 +1,20 @@
 /*Variables*/
 
+/*Espacio entre col*/
+$Col-space:16px;
+
 /*Breakpoints*/
 
-/*Container*/
-$max-width-container: 1200px;
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
 
+/*Container*/
+
+$max-width-container: 1200px;
 html {
-  font-size: 18px;
-  font-family: $font-primary;
+    font-size: 18px;
+    font-family: $font-primary;
 }

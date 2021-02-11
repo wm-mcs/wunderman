@@ -4,17 +4,19 @@
 @import "./config/generals_config.scss";
 @import "./helpers/layout.scss";
 @import "./helpers/tags.scss";
+@import "./helpers/text.scss";
 @import "./helpers/botones.scss";
 @import "./components/header/header.scss";
 @import "./components/slider/slider_custome.scss";
 @import "./plaugins/flickity.scss";
-
+@import "./components/item/item.scss";
+@import "./components/form/input.scss";
 .background {
-  background-color: red;
-  color: white;
+    background-color: red;
+    color: white;
 }
 
 .parrafo {
-  font-size: 50px;
-  font-weight: bold;
+    font-size: 50px;
+    font-weight: bold;
 }
