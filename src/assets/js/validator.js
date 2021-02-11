@@ -4,7 +4,9 @@ const loginForm = document.forms[0];
 // Function manipulates validation messages by toggling them
 function manipulateValidationMsg(validationData) {
 	const { inputProps, action } = validationData;
-	const elementValidationMsg = inputProps.nextElementSibling.nextElementSibling;
+	const elementValidationMsg = inputProps.nextElementSibling.getElementsByClassName(
+		"message"
+	)[0];
 	const validationMsgClasses = elementValidationMsg.classList;
 	const removeClass = () => {
 		validationMsgClasses.remove("hide");
@@ -26,10 +28,10 @@ function manipulateValidationMsg(validationData) {
 function validationRules() {
 	return {
 		nombre: inputProps => {
-			const usernameValidationRule = /[A-Za-z0-9]{6,}/;
+			const validationRule = /[A-Za-z0-9]{6,}/;
 			const inputValue = inputProps.value;
 			const inputName = inputProps.name;
-			const isInputValid = usernameValidationRule.test(inputValue);
+			const isInputValid = validationRule.test(inputValue);
 
 			isInputValid
 				? manageState().removeFromState({ inputProps, inputName })
@@ -41,10 +43,10 @@ function validationRules() {
 		},
 
 		apellido: inputProps => {
-			const passwordValidationRule = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,10}$/g;
+			const validationRule = /[A-Za-z0-9]{6,}/;
 			const inputValue = inputProps.value;
 			const inputName = inputProps.name;
-			const isInputValid = passwordValidationRule.test(inputValue);
+			const isInputValid = validationRule.test(inputValue);
 
 			isInputValid
 				? manageState().removeFromState({ inputProps, inputName })
@@ -53,10 +55,10 @@ function validationRules() {
 			return true;
 		},
 		email: inputProps => {
-			const emailValidationRule = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,10}$/g;
+			const validationRule = /[A-Za-z0-9]{6,}/;
 			const inputValue = inputProps.value;
 			const inputName = inputProps.name;
-			const isInputValid = emailValidationRule.test(inputValue);
+			const isInputValid = validationRule.test(inputValue);
 
 			isInputValid
 				? manageState().removeFromState({ inputProps, inputName })
@@ -72,7 +74,7 @@ function validationRules() {
 			for (const inputProps of formInputElems) {
 				const inputName = inputProps.name;
 				const inputValue = inputProps.value;
-
+				console.log(inputProps.name);
 				if (!inputValue) {
 					manageState().addToState({ inputProps, inputName });
 				}
