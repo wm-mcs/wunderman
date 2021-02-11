@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "flickity": "^2.2.2",
-    "simple-slider": "^1.0.1"
+    "simple-slider": "^1.0.1",
+    "sweetalert": "^2.1.2"
   }
 }
