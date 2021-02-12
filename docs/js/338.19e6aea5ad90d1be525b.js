@@ -1,0 +1,1 @@
+(self.webpackChunktest=self.webpackChunktest||[]).push([[338],{338:(e,s,c)=>{"use strict";c.r(s),c.d(s,{comprar:()=>n});var u=c(737),a=c.n(u),n=function(){a()("¡Eres una buena persona!","¡Este fue el mejor click del día de hoy!","success")}}}]);
