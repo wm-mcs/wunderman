@@ -1,5 +1,6 @@
 import "./../css/index.scss";
 import "./../static/img/social/facebook.png";
+import "./../static/img/mancha.png";
 
 import departamentos from "./dataDepartamentoLocalidad";
 import slider from "./slider";

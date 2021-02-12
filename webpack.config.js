@@ -12,7 +12,8 @@ module.exports = {
     path: path.resolve(__dirname, "docs"),
     filename: "js/[name].js",
 
-    chunkFilename: "js/[id].[chunkhash].js"
+    chunkFilename: "js/[id].[chunkhash].js",
+    publicPath: ""
   },
   module: {
     rules: [
@@ -46,8 +47,10 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "[name].[ext]",
-              outputPath: "assets/images/"
+              name: "[path][name].[ext]",
+
+              publicPath: "../",
+              useRelativePaths: true
             }
           }
         ]
@@ -67,7 +70,7 @@ module.exports = {
       template: path.resolve(__dirname, "src/index.html")
     }),
     new MiniCssExtractPlugin({
-      filename: "css/[name].css"
+      filename: "css/[contenthash].css"
     })
   ]
 };
