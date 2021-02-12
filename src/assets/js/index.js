@@ -1,85 +1,75 @@
 import "./../css/index.scss";
 import flky from "flickity";
 import submitForm from "./validator";
+import departamentos from "./dataDepartamentoLocalidad";
 
 document.addEventListener("DOMContentLoaded", submitForm);
-const SLIDER = document.getElementById("slider");
-new flky(SLIDER, {
-  accessibility: true,
-  // enable keyboard navigation, pressing left & right keys
+document.getElementById("comprar").addEventListener("click", async function() {
+	const { comprar } = await import("./comprar");
+	comprar();
+});
+departamentos();
 
-  adaptiveHeight: true,
-  // set carousel height to the selected slide
+new flky(document.getElementById("slider"), {
+	accessibility: true,
 
-  autoPlay: false,
-  // advances to the next cell
-  // if true, default is 3 seconds
-  // or set time between advances in milliseconds
-  // i.e. `autoPlay: 1000` will advance every 1 second
+	adaptiveHeight: true,
 
-  cellAlign: "center",
-  // alignment of cells, 'center', 'left', or 'right'
-  // or a decimal 0-1, 0 is beginning (left) of container, 1 is end (right)
+	autoPlay: false,
 
-  cellSelector: "container-slider-custome-block",
-  // specify selector for cell elements
+	cellAlign: "center",
 
-  contain: false,
-  // will contain cells to container
-  // so no excess scroll at beginning or end
-  // has no effect if wrapAround is enabled
+	cellSelector: "container-slider-custome-block",
 
-  draggable: ">1",
-  // enables dragging & flicking
-  // if at least 2 cells
+	contain: false,
 
-  dragThreshold: 3,
-  // number of pixels a user must scroll horizontally to start dragging
-  // increase to allow more room for vertical scroll for touch devices
+	draggable: ">1",
 
-  freeScroll: true,
-  // enables content to be freely scrolled and flicked
-  // without aligning cells
+	dragThreshold: 3,
 
-  friction: 0.2,
-  // smaller number = easier to flick farther
+	freeScroll: true,
+	// enables content to be freely scrolled and flicked
+	// without aligning cells
 
-  groupCells: false,
-  // group cells together in slides
+	friction: 0.2,
+	// smaller number = easier to flick farther
 
-  initialIndex: 0,
-  // zero-based index of the initial selected cell
+	groupCells: false,
+	// group cells together in slides
 
-  lazyLoad: true,
-  // enable lazy-loading images
-  // set img data-flickity-lazyload="src.jpg"
-  // set to number to load images adjacent cells
+	initialIndex: 0,
+	// zero-based index of the initial selected cell
 
-  percentPosition: true,
-  // sets positioning in percent values, rather than pixels
-  // Enable if items have percent widths
-  // Disable if items have pixel widths, like images
+	lazyLoad: true,
+	// enable lazy-loading images
+	// set img data-flickity-lazyload="src.jpg"
+	// set to number to load images adjacent cells
 
-  prevNextButtons: true,
-  // creates and enables buttons to click to previous & next cells
+	percentPosition: true,
+	// sets positioning in percent values, rather than pixels
+	// Enable if items have percent widths
+	// Disable if items have pixel widths, like images
 
-  pageDots: false,
-  // create and enable page dots
+	prevNextButtons: true,
+	// creates and enables buttons to click to previous & next cells
 
-  resize: true,
-  // listens to window resize events to adjust size & positions
+	pageDots: false,
+	// create and enable page dots
 
-  rightToLeft: false,
-  // enables right-to-left layout
+	resize: true,
+	// listens to window resize events to adjust size & positions
 
-  setGallerySize: true,
-  // sets the height of gallery
-  // disable if gallery already has height set with CSS
+	rightToLeft: false,
+	// enables right-to-left layout
 
-  watchCSS: false,
-  // watches the content of :after of the element
-  // activates if #element:after { content: 'flickity' }
+	setGallerySize: true,
+	// sets the height of gallery
+	// disable if gallery already has height set with CSS
 
-  wrapAround: false
-  // at end of cells, wraps-around to first for infinite scrolling
+	watchCSS: false,
+	// watches the content of :after of the element
+	// activates if #element:after { content: 'flickity' }
+
+	wrapAround: false
+	// at end of cells, wraps-around to first for infinite scrolling
 });

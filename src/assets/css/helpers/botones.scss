@@ -1,13 +1,36 @@
 .boton-princial {
-  background-color: $color-primary;
-  text-align: center;
-  font-family: $font-secondary;
-  border-radius: 4px;
-  width: 100%;
-  color: $color-white;
-  padding: 10px 10px;
+	background-color: $color-primary;
+	text-align: center;
+	font-family: $font-secondary;
+	border-radius: 4px;
+
+	color: $color-white;
+	padding: 25px 35px;
+	font-family: $font-primary;
+	letter-spacing: 6px;
+	border: solid 1px transparent;
+
+	cursor: pointer;
 }
 
 .boton-princial:hover {
-  background-color: lighten($color-primary, 20);
+	background-color: darken($color-primary, 20);
+}
+
+.boton-small {
+	font-size: 14px;
+}
+
+.boton-big {
+	font-size: 16px;
+}
+
+@media (min-width: $md) {
+	.boton-small {
+		font-size: 24px;
+	}
+
+	.boton-big {
+		font-size: 36px;
+	}
 }

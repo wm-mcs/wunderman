@@ -2,7 +2,6 @@
 
 $color-primary: #4ea6e5;
 $color-secondary: blue;
-
 $color-white: #fff !default;
 $color-gray-100: #f8f9fa !default;
 $color-gray-200: #e9ecef !default;
@@ -14,3 +13,17 @@ $color-gray-700: #495057 !default;
 $color-gray-800: #343a40 !default;
 $color-gray-900: #212529 !default;
 $color-black: #000 !default;
+
+/*Colores personalizdos del test*/
+$color-grey-background-light: #d3d3d3 !default;
+$color-grey-background-dark: #b3b3b3 !default;
+$color-grey-background-extra-dark: #696969 !default;
+
+$color-grey-text: #868686 !default;
+
+/*Error success*/
+
+$color-success: green;
+$color-success-light: lighten($color-success, 10);
+$color-error: red;
+$color-error-light: lighten($color-error, 10);
