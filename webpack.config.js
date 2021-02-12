@@ -41,8 +41,16 @@ module.exports = {
       },
 
       {
-        test: /\.jpg|png|gif$/,
-        use: { loader: "url-loader", options: { limit: 9000 } }
+        test: /\.(gif|png|jpe?g)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "assets/images/"
+            }
+          }
+        ]
       },
       {
         test: /\.(ttf|eot|svg|gif|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
